@@ -1,6 +1,6 @@
 # Apache Spark for big data
 
-After testing the distributed engine, maybe it is good to go back to [the first examples](thefirstdbataste.md): what if you have a lot of files or tabular data that you need to process that does not fit into the distributed engine.
+After testing the distributed engine, maybe it is good to go back to [the first examples](thefirstbdataste.md): what if you have a lot of files or tabular data that you need to process that does not fit into the distributed engine.
 
 You can try with Spark programming. Spark is complex but we just make an example to have  a feeling about its powerful in supporting us. You can go back to the taxi example
 

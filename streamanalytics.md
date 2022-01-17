@@ -19,9 +19,11 @@ Key concepts in streaming analytics would be:
 ## Some paths for study
 
 * Path 1: if you don’t have a preference and need challenges, you can choose Apache Flink Stream API (e.g., with  RabbitMQ/Kafka connectors)
+  - See the [Base Transceiver Station stream analytics example](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/tree/master/tutorials/streamingwithflink)
 
 * Path 2: many of you have worked with Kafka: you can select [Kafka Streams DSL](https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html), [Kafka SQL](https://www.confluent.io/product/ksql/) (everything can be  done with Kafka)
 
-* Path 3: for those of you who are working with Apache Spark (and Python is the main programming language) Apache Spark Structured Streaming
+* Path 3: for those of you who are working with [Apache Spark Structured Stream](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html) (and Python is the main programming language)
+  - See [A basic Spark Stream example](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/tree/master/tutorials/spark-streaming)
 
 * Path 4: for those who deal with MQTT brokers: you can use [Apache Storm ](https://storm.apache.org/)  Spout and Bolt API or Stream API
