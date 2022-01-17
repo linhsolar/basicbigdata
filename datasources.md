@@ -17,9 +17,27 @@ Examples of databases/storage systems that we will find suitable for big data an
 * [Hadoop File System](https://hadoop.apache.org/)
 * [Apache Hudi](https://hudi.apache.org/)
 * [HBase](https://hbase.apache.org/)
-* [MongoDB](https://www.mongodb.com/) 
+* [MongoDB](https://www.mongodb.com/)
 
 any many more!
+
+## Column family based Storage in Big Data
+In big data, many systems support column family based/wide-column storage. What is it and why?
+
+A common way to organize data in storage and database is to use the table view: we have a row to keep data belong to the same record. And we have multiple rows. It is very good for situations when we need to update data in a record or access a record as a whole, e.g. update the job status of a worker or provide the detail of a worker profile, and every row/record has  the same fields.
+
+With big data, in many use cases, we have to scan and aggregate data from millions of rows but with a few columns (and we do not the update of existing data often). In such cases, storing data based on the columns will help to save space as well as to enable big data analytics. For example, if we want to count how many trips the NY Taxi services have conducted, we can scan millions records but a single column.
+
+Furthermore, other aspects of storage in big data are:
+* Different rows can have different schemas (the columns are different).
+* A cell stores a value with versioning data, e.g., using timestamp
+* Related columns organized into a family are usually stored and sharded together
+
+Therefore, column family based storage is popular in big data. It is also called [wide-column store](https://en.wikipedia.org/wiki/Wide-column_store). Many big data systems implement the column family data model, such as:
+  * [ Apache HBase](https://www.slideshare.net/larsgeorge/hbase-in-practice)
+  * [Apache Accumulo](https://accumulo.apache.org/docs/2.x/getting-started/table_design)
+  * [Apache Cassandra](https://cassandra.apache.org/_/index.html)
+
 
 ## Metadata
 
