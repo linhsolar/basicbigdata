@@ -36,12 +36,14 @@ In many cases, we also use the term "data workflows": which means that the workf
 To be successful for different applications, workflows need rich connectors to various data sources. To be able to support different scenarios of big data, we need big data computation engines for running different workload: ML and (batch/stream) big data processing. Such engines and workflow tasks require highly dynamic, powerful underlying cloud infrastructures.
 
 There are many frameworks for workflows. From the study we can focus on some common ones like:
-* Apache Oozie: http://oozie.apache.org/
+* [Apache Oozie](http://oozie.apache.org/):
 designed to work with Hadoop: orchestrating Hadoop jobs
 it is important if you need to manage a lot of Hadoop/MapReduce jobs
 Fluent Job API & XML-based workflows
 * Serverless-based: Function-as-a-Service
 e.g., Microsoft, Google, AWS serverless/function-as-a-service
-* Apache Airflow: a generic workflow framework
-* Candace:
-* Argo: Workflows for managing machine learning pipelines
+* [Apache Airflow](https://airflow.apache.org/): a generic workflow framework
+* [Argo Workflow](https://argoproj.github.io/argo-workflows/): Workflows for managing machine learning pipelines
+
+## Some samples
+- Simple [BTS Alarms and Camera Upload](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/tree/master/tutorials/airflow)
