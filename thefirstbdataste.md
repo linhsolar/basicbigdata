@@ -62,7 +62,7 @@ Let us use [Google BigQuery](https://cloud.google.com/bigquery), which provides 
 
 >Select the Chicago taxi trips from Google BigQuery and sum up the total amount. The snapshot shows that the query needs to process 9.2GiB of data. How long does it take?
 
-![BigQuery](figs/bigqueryex.png)
+![BigQuery Chicago data](figs/bigqueryex.png)
 
 There  are many other solutions, as you go along with this introduction of big data analytics and platforms, you will see that they offer similar ways of SQL style to run analytics in terabytes/petabyties of data
 
@@ -76,7 +76,7 @@ Let us say we want to use Jupyter Notebook, the popular tool for data science to
 
 > You can go  to Kaggle and create a notebook then add [squid game twitter dataset](https://www.kaggle.com/deepcontractor/squid-game-netflix-twitter-data)
 
-![BigQuery](figs/squidgame.png)
+![Kaggle Squid Game](figs/squidgame.png)
 
 https://www.kaggle.com/linhsolar/firsttastesquidgame/edit
 
