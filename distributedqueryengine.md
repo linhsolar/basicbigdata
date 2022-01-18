@@ -97,3 +97,10 @@ Splits: 18 total, 18 done (100.00%)
 Presto is distributed query enginee but there are many powerful big databases offering SQL-style queries. Such powerful databases may be more than a database at they include analytics features. They might rely on very large-scale, complex data infrastructures. Some cases, they are [data lakes](https://en.wikipedia.org/wiki/Data_lake). Therefore, they alone can be enough for many use cases.
 
 You can take a look at Google BigQuery, Apache Druid, [Apache Hudi](https://hudi.apache.org/), etc.
+
+## Interactive analytics, Dashboards and Visualization.
+With distributed query engines and SQL-on-Hadoop or similar techniques that allow us to issues sql-style analytics to very big data sources, we can enjoy many powerful tools for BI, interactive analytics, dashboards and visualizations.
+
+One example is [Apache Superset](https://superset.apache.org/), which can be used to create dashboards of powerful charts with many big databases/datasets. The following figure shows an example of network monitoring data, where the data is from a big database based on [Apache Druid](https://druid.apache.org/)
+
+![Superset network visualization](figs/supersetdruidnetwork.png)
