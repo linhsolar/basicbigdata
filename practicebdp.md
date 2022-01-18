@@ -66,3 +66,4 @@ Since the industry has a lot of data, many companies deal with big data daily an
 
 * [Real-time Data Infrastructure at Uber](https://arxiv.org/pdf/2104.00087.pdf)
 * [Uber’s Big Data Platform: 100+ Petabytes with Minute Latency ](https://eng.uber.com/uber-big-data-platform/)
+* [How Druid enables analytics at Airbnb](https://medium.com/airbnb-engineering/druid-airbnb-data-platform-601c312f2a4c)

@@ -80,8 +80,21 @@ Let us say we want to use Jupyter Notebook, the popular tool for data science to
 
 https://www.kaggle.com/linhsolar/firsttastesquidgame/edit
 
+### Combining different ways
+
+You can also combine different ways. For example from Pandas you can connect to Google BigQuery using  [Python BigQuery Pandas](https://github.com/googleapis/python-bigquery-pandas). For example, this simple program [pandas_bigquery_chicago_taxi_amount_calculation.py](code/pandas_bigquery_chicago_taxi_amount_calculation.py) would produce:
+
+```
+python pandas_bigquery_chicago_taxi_amount_calculation.py -c simplebigquery-337017-4cfbc650ceae.json -p simplebigquery-337017
+The total amount calculated  is 3123971382.819864
+```
+
+ Similarly [BigQuery-Spark Connector](Spark https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example) allows you to process BigQuery from Spark.
+
+Welcome to the basics of big data analytics!
+
 ### Observations and questions
 
 Maybe you already have some questions: what would be **"behind the scenes"** so that Dask or Spark programs work but not the Pandas one? How would Google BigQuery handle such a large amount of data in a short time? Why cant you do the same thing with your deployment of simple PostgreSQL? One of the first observations you might see that we need to use suitable frameworks/techniques when analyzing big data as these frameworks/techniques not only do the heavy lifting for the user but also know how to deal with a lot of resources (or the limited resources) for big data.
 
-Whether you follow the high-level BI style analytics or the low-level programming ways, you already see that there are many different ways for dealing with big data. Not a single one will meet all the requirements. Furthermore, this first taste shows you that we need to deal with different types of data and they might come from different places. 
+Whether you follow the high-level BI style analytics or the low-level programming ways, you already see that there are many different ways for dealing with big data. Not a single one will meet all the requirements. Furthermore, this first taste shows you that we need to deal with different types of data and they might come from different places.
