@@ -89,7 +89,7 @@ python pandas_bigquery_chicago_taxi_amount_calculation.py -c simplebigquery-3370
 The total amount calculated  is 3123971382.819864
 ```
 
- Similarly [BigQuery-Spark Connector](Spark https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example) allows you to process BigQuery from Spark.
+ Similarly [BigQuery-Spark Connector](https://cloud.google.com/dataproc/docs/tutorials/bigquery-connector-spark-example) allows you to process BigQuery from Spark.
 
 Welcome to the basics of big data analytics!
 
