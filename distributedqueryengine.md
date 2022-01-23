@@ -1,11 +1,18 @@
-# Distributed SQL Query Engine
+# Distributed SQL Query Engine and Dashboards
 
-One of the big data analytics models is to use suitable query engines to interface to multiple sources of big data. It is for example the way how [Presto](https://prestodb.io/) supports big data querying.
+
+*It is the big data analytics path for learners from business schools*.
+
+One of the big data analytics models is to use suitable query engines to interface to multiple sources of big data. It is for example the way how [Presto](https://prestodb.io/) supports big data querying. Another way is to use various easy-to-use dashboards and visualization tools to analyze big data. It can be achieved via SQL portals of big databases or nice dashboards like [Superset](https://superset.apache.org/).
 
 
 After playing with this simple example, can you image that to follow this solution, are you able to deal with all use cases you have for big data? Of course, you should imagine that maybe you can interface to many other types of data sources you have, like Cassandra, MySQL, etc.
 
-## Example with Presto
+## Distributed Query Engine with Presto
+
+### Requirements for study
+
+To study we need to have some data sources and Presto to be setup. We will explain some examples. However, as the learners from business schools, such setups can be done by the IT team.
 
 #### Setup a single mongodb
 Several tutorials show how to setup a MongoDB (e.g., ). Here we just show how to set a single MongoDB running in a container.
@@ -38,7 +45,7 @@ mongodb.seeds=localhost
 because:
 - we setup the document MongoDB without username and password (not a good way but here we just illustrate a very very basic example)
 
-#### start a query from Presto client
+### Start a query from Presto client
 
 >Remember to have the Presto client as described in [Presto installation](https://prestodb.io/docs/current/installation/cli.html)
 
@@ -47,7 +54,7 @@ select neighbourhood_cleansed,neighbourhood_group_cleansed,latitude,longitude,pr
 ```
 ![Example of a snapshot](figs/presto-mongodb-airbnb.png)
 
-## Presto with BigQuery
+### Presto with BigQuery
 
 For example, in order to use the public dataset, we create a project, within that project we have a service account. Then we use the configuration
 ```
@@ -57,7 +64,7 @@ bigquery.credentials-file=/opt/presto/etc/catalog/simplebigquery-337017-4cfbc650
 ```
 >Note: usually we access dataset in the project we create. However, in this case, the project is only for creating the service account to access BigQuery DataSet.
 
-### Check Schemas
+#### Check Schemas
 
 ```
 truong@aaltosea-P620:/opt/presto/bin$ ./presto --server localhost:9090 --catalog bigquery --schema bigquery
@@ -96,7 +103,9 @@ Splits: 18 total, 18 done (100.00%)
 ## SQL-on-Hadoop or SQL with big databases
 Presto is distributed query enginee but there are many powerful big databases offering SQL-style queries. Such powerful databases may be more than a database at they include analytics features. They might rely on very large-scale, complex data infrastructures. Some cases, they are [data lakes](https://en.wikipedia.org/wiki/Data_lake). Therefore, they alone can be enough for many use cases.
 
-You can take a look at Google BigQuery, Apache Druid, [Apache Hudi](https://hudi.apache.org/), etc.
+You can take a look at Google BigQuery, Apache Druid, [Apache Hudi](https://hudi.apache.org/), etc. For example, the following snapshot gives an SQL query against a fake payment database in Druid.
+
+![SQL with Druid example](figs/druidsql.png)
 
 ## Interactive analytics, Dashboards and Visualization.
 With distributed query engines and SQL-on-Hadoop or similar techniques that allow us to issues sql-style analytics to very big data sources, we can enjoy many powerful tools for BI, interactive analytics, dashboards and visualizations.

@@ -14,7 +14,7 @@ Even though we try to remove as much as possible difficult, advanced computer sc
 #### Understanding the source of data
 - [Data sources](datasources.md)
 #### Big Data Analytics
-- [Have your first try with distributed query engine](distributedqueryengine.md)
+- Learners from business schools: [Have your first try with distributed query engines and Dashboards](distributedqueryengine.md)
 - [Try with Apache Spark](spark.md)
 - [Streaming analytics](streamanalytics.md)
 - [Using workflows](workflow.md)
