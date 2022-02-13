@@ -48,3 +48,8 @@ To give one example, let us assume that a tenant has created a group of datasets
 A big data platform would provide features for creating metadata. For example, in [Data Catalog from Google Cloud](https://cloud.google.com/data-catalog), your create template for certain types of metadata. Examples are "Data Governance", "Geo Context" and "Data Quality". Metadata can be associated with the whole dataset or individual data columns. For example, in "Data Governance", you see different information, like "Owner", "Classification", "Personally identifiable information", and "Encrypted" or you see "Geo Context" with "Region" and "Country", and "Data Quality" with  "Completeness".
 
 In general, we should provide various features for the customers to manage metadata about their data in our big data platforms. There are many other systems for metadata, such as [Linkedin DataHub](https://github.com/linkedin/datahub) or [Apache Atlas](https://atlas.apache.org/#/)
+
+## How to choose big databases/storage
+
+So we say there are many different types of databases and storage for big data and we give some examples above. However, a tricky question is "*how do I select a suitable database/storage for my big data work, say to store my data?*". There is no answer for that question: one has to have a good understanding of existing database/storage technologies and to match these technologies with requirements (type of data, cost, performance, etc.). Some sources may be useful for you to check:
+* [Choosing A Cloud DBMS: Architectures and Tradeoffs](http://vldb.org/pvldb/vol12/p2170-tan.pdf)
