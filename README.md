@@ -19,6 +19,12 @@ Even though we try to remove as much as possible difficult, advanced computer sc
 - [Streaming analytics](streamanalytics.md)
 - [Using workflows](workflow.md)
 
+#### Data Ingestion and Transformation
+One type of activities, we have to master is to carry out pipelines to do data ingestion and transformation. One can see that data ingestion and transformation rely on certain types of big data analytics discussed above. However, we can see that data ingestion and transformation are complex applications and workflows that need to combine different techniques.
+- Building basic tasks for processing data (e.g., read/write data, basic analysis)
+- Using workflows and reactive techniques to build pipelines/workflows
+- Applying suitable deployment and management to run ingestion/transformation pipelines
+
 #### Big Data Platforms
 - [Basic big data platforms](basicbdp.md)
 - [The open source ecosystems we pracice](practicebdp.md)

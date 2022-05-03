@@ -1,7 +1,21 @@
 # Workflows
 
 ## What is a workflow?
-Workflows are a key model that we can use in many different purposes in big data analytics and big data platforms. Workflows are well-known and well-developed. In a big data platform, workflows can be used for
+Workflows are a key model that we can use in many different purposes in big data analytics and big data platforms. Workflows are well-known and well-developed.
+
+Business workflow focusing
+
+Scientific workfow focuses on running jobs in computing
+
+so what is interesting of workflow for big data platforms: obviously like business, ..
+
+however the interesting is the combination of many different services for various combined goals in big data
+- deploy resources and run analytics at the same time
+- analytics and connect to business
+- human in the loop
+
+## Workflows in big data
+In a big data platform, workflows can be used for
 
 * Data Processing: data analytics, extraction, transformation, data transfers
 * Machine learning: collecting data, orchestrating training experiments, implementing tasks in serving machine learning algorithms

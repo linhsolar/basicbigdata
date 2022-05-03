@@ -49,7 +49,7 @@ A big data platform would provide features for creating metadata. For example, i
 
 In general, we should provide various features for the customers to manage metadata about their data in our big data platforms. There are many other systems for metadata, such as [Linkedin DataHub](https://github.com/linkedin/datahub) or [Apache Atlas](https://atlas.apache.org/#/)
 
-## How to choose big databases/storage
+## How to choose big databases/storage?
 
 So we say there are many different types of databases and storage for big data and we give some examples above. However, a tricky question is "*how do I select a suitable database/storage for my big data work, say to store my data?*". There is no answer for that question: one has to have a good understanding of existing database/storage technologies and to match these technologies with requirements (type of data, cost, performance, etc.). Some sources may be useful for you to check:
 * [Choosing A Cloud DBMS: Architectures and Tradeoffs](http://vldb.org/pvldb/vol12/p2170-tan.pdf)

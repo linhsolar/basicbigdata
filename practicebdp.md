@@ -5,17 +5,18 @@ Big data  platforms are so complex. Therefore, we rely a lot of open source serv
 ## Building the big data infrastructure
 The big data infrastructure has several components. At the high-level we need to:
 
-* Combine dedicated servers + VMs
+* **Combine dedicated servers + VMs**
     - Establish elastic infrastructure using elasticity and virtualization
+    - Utilize containers, VMs with different orchestration systems, like Kubernetes or OpenStack
 
-* High performance
+* **High performance computing systems**
     - Enable running parallel and concurrent programs for database, messaging, and analytics
 
-* Broker/messaging services
+* **Broker/messaging services**: these services serve for different purposes. First of all, they can be used for transferring "raw big data", such as streaming IoT data/event logs, or disseminating analytics results, such as anomaly detection outcome for a time window. Second, they can be used for sending/receiving commands that orchestrate/trigger tasks used for big data platforms. Often we need to combine some of them within a platform.
     - Large-scale, high performance with standard protocols, such as AMQP and  MQTT
-    - Support different messaging systems, e.g., RabbitMQ & Apache Kafka
+    - Support different messaging systems, e.g., RabbitMQ, Apache Kafka, and [NSQ](https://nsq.io/)
 
-* Datastore technologies: data storage, databases and data services.
+* **Datastore technologies**: data storage, databases and data services.
 
 * Processing frameworks
 
@@ -68,3 +69,4 @@ Since the industry has a lot of data, many companies deal with big data daily an
 * [Uber’s Big Data Platform: 100+ Petabytes with Minute Latency ](https://eng.uber.com/uber-big-data-platform/)
 * [How Druid enables analytics at Airbnb](https://medium.com/airbnb-engineering/druid-airbnb-data-platform-601c312f2a4c)
 * [Hive – A Petabyte Scale Data Warehouse using Hadoop](https://engineering.fb.com/2009/06/10/web/hive-a-petabyte-scale-data-warehouse-using-hadoop/)
+* [The Four Innovation Phases of Netflix’s Trillions Scale Real-time Data Infrastructure](https://zhenzhongxu.com/the-four-innovation-phases-of-netflixs-trillions-scale-real-time-data-infrastructure-2370938d7f01)
