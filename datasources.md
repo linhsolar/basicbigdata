@@ -5,11 +5,19 @@ If you look around, you see a lot of open data sources. Many of them are quite b
 
 So if you are going to analyze big data, which data sources and data management problems will you have to deal with? Concretely, you might ask which databases and data systems that you will send your analytics requests via your programs or existing tools.
 
-In the big data, there are many types of data sources, offered through different data storage, databases, and other forms of big data infrastructures. Some of them might not be designed specifically for big data but they have to be re-architected/adapted for big data. Some are specifically designed for big data.
+In the big data, there are many types of data sources, offered through different data storage, databases, messaging systems, and other forms of big data infrastructures. Some of them might not be designed specifically for big data but they have to be re-architected/adapted for big data. Some are specifically designed for big data.
 
+### Data at rest vs data in motion 
+
+Data sources can provide [data at rest](https://en.wikipedia.org/wiki/Data_at_rest) or [data in motion (or data in transit)](https://en.wikipedia.org/wiki/Data_in_transit) for analytics. Data at rest means that the data is stored in a physical place and assumed to be in the place for various tasks as long as the data is needed. Data at rest is usually delivered via databases, data storages and file systems. Data in motion means that the data is moving from one place to another place, thus the data will stay just a while for the analytics. This temporal aspect can mean a second, an hour or a day. Data in motion is usually delivered via messaging systems. 
+
+Given the data at rest and data in motion, we will have to use different techniques to analyze them. However, often we would like to use common techniques as much as possible for both types of data. Therefore, you may see that we use tables to capture both data at rest and data in motion. Furthermore, for real-world applications, both types of data are usually handled together. Thus, there are various architectures and frameworks supporting both types of data. 
 
 ## Polyplot big data sources
 When dealing with big data, often we need to deal with different data sources and different types of data. Furthermore, in order to manage a big data platform, we also use different databases. Therefore, [polyplot persistence](https://en.wikipedia.org/wiki/Polyglot_persistence) is what we need to support in big data platforms.
+
+
+### For data at rest 
 
 Examples of databases/storage systems that we will find suitable for big data analytics:
 * [Cassandra](https://cassandra.apache.org/)
@@ -20,6 +28,13 @@ Examples of databases/storage systems that we will find suitable for big data an
 * [MongoDB](https://www.mongodb.com/)
 
 any many more!
+### For data in motion 
+
+Usually the data is deliverd via messaging systems, such as 
+* Systems supporting MQTT: [VerneMQ](https://vernemq.com/), [Mosquitto](https://mosquitto.org/), [EMQ](https://www.emqx.io/), [RabbitMQ](https://www.rabbitmq.com/)
+* NATS: [NATS](https://nats.io/)
+* Systems support AMQP: [RabbitMQ](https://www.rabbitmq.com/) 
+* No protocol standard but widely used systems: [Apache Kafka](https://kafka.apache.org/), [Apache Pulsar](https://pulsar.apache.org/) 
 
 ## Column family based Storage in Big Data
 In big data, many systems support column family based/wide-column storage. What is it and why?
