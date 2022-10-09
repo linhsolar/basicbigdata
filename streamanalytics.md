@@ -27,3 +27,12 @@ Key concepts in streaming analytics would be:
   - See [A basic Spark Stream example](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/tree/master/tutorials/spark-streaming)
 
 * Path 4: for those who deal with MQTT brokers: you can use [Apache Storm ](https://storm.apache.org/)  Spout and Bolt API or Stream API
+
+## Understanding data from messaging systems 
+
+Large-scale messaging systems for big data are complex. There are many such systems that one should be familiar with in order to integrate streaming analytics with such messaging systems:
+
+* Systems supporting MQTT: [VerneMQ](https://vernemq.com/), [Mosquitto](https://mosquitto.org/), [EMQ](https://www.emqx.io/), [RabbitMQ](https://www.rabbitmq.com/)
+* NATS: [NATS](https://nats.io/)
+* Systems support AMQP: [RabbitMQ](https://www.rabbitmq.com/) 
+* No protocol standard but widely used systems: [Apache Kafka](https://kafka.apache.org/), [Apache Pulsar](https://pulsar.apache.org/) 
