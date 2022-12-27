@@ -38,7 +38,7 @@ Usually the data is deliverd via messaging systems, such as
 * Systems support AMQP: [RabbitMQ](https://www.rabbitmq.com/) 
 * No protocol standard but widely used systems: [Apache Kafka](https://kafka.apache.org/), [Apache Pulsar](https://pulsar.apache.org/) 
 
-## Data File formats and storage 
+## Data file formats and storage 
 
 ### Data file formats
 
