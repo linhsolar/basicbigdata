@@ -1,15 +1,16 @@
 # The first taste of  big data analytics
 
-### How would you start your big data analytics
-Say you need to analyze a big amount of data for your work (e.g., in a company dealing with different customers, as student doing analysis of data produced by manufacturing processes). Dependent on who are you, when starting big data analytics, you might think:
+### How would you start your big data analytics?
+
+Say, in your work, you need to analyze a big amount of data (e.g., in a company dealing with different customers, as a student doing analysis of data produced by manufacturing processes). Dependent on who are you (your roles, knowledge, skills, and job needs), when starting big data analytics, you might think:
 - like a data scientist or a programmer: start with [Pandas](https://pandas.pydata.org/), [Jupyter Notebook](https://jupyter.org/), and other popular libraries/tools like [Numpy](https://numpy.org/), [Mathplotlib](https://matplotlib.org/), [spaCy](https://spacy.io/) (text processing), [GeoPandas](https://geopandas.org/en/stable/) (for geodata). These libraries and tools are well-known and there are endless of blogs and papers showing how to use them for data analytics.
 - like a business analyst or scientist who does not want to dive deep into the programming with Python, Java, GoLang, etc: start to write [some queries as BI systems](https://cloud.google.com/bigquery/docs/bi-engine-intro) would help you to deal with all low-level details.
 
->The reasons for your way vary: maybe you already have some training in common data analytics. You might already be familiar with analysis using excel or your professor in the hot data science course shows you the beauty of Jupiter Notebook.
+>The reasons for your way vary: maybe you already have some training in common data analytics. You might already be familiar with analysis using Microsoft Excel or your professor in the hot data science course shows you the beauty of Jupiter Notebook for all kinds of data analysis and machine learning tasks.
 
 So let us practice a bit, even though you might not be familiar with the following tools, you might find some common problems when working with big data.
 
-### The programming way: Pandas, Dask or Spark for Taxi Data
+### The programming way: Pandas, Dask, Vaex, or Spark for Taxi Data
 
 We get a reasonable big dataset: [the NY taxi](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) and try to run/write some simple programs which just, for example,  sum up how much money generated from trips in a month or how many trips have been. At the end, NY is a big city and we are probably aware of the size of taxi services there.
 
@@ -51,9 +52,18 @@ The total amount calculated from this file is 1837861124.9500003
 ```
 How can Dask help to run the program successful?
 
+
+Similarly, you can try to test the solution [using Vaex framework](https://github.com/vaexio/vaex) in using [this program](code/vaex_taxi_amount_calculation.py)
+
 Let us see if you can use [Apache Spark](https://spark.apache.org/). Still in a single machine, we have a different program. The structure of the Spark program ([spark_taxi_amount_calculation](code/spark_taxi_amount_calculation.py)) is not much different from the Dask or Pandas ones. Are you successful? Mine runs fine.
 
 So what do you see here? The same hardware but using different frameworks, the success is different, while the data analysis programs are look quite similar! **Here are the first point**: big data needs suitable frameworks to handle the data, although at the high-level view, one might see similar things. The specific techniques for big data are within the design of such frameworks.
+
+However, it may turn out for further questions when using the above-mentioned frameworks
+
+* How would your program access big data from other places (e.g., Amazone S3)?
+* Howe would you integrate your data analysis programs into other frameworks/systems for your work
+* etc
 
 
 ### The BI style, the SQL with big data
