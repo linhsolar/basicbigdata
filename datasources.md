@@ -38,7 +38,22 @@ Usually the data is deliverd via messaging systems, such as
 * No protocol standard but widely used systems: [Apache Kafka](https://kafka.apache.org/), [Apache Pulsar](https://pulsar.apache.org/) 
 
 
-## Column family based Storage in Big Data
+## Data file formats and storage 
+
+### Data file formats
+
+It is easy to think that we mostly deal with CSV data files, due to their abundant availability for data analytics and machine learning. In fact, there are many data file formats employed in big data analytics and platforms. Some of these types of formats are designed for big data requirements.  For example, in many applications in businesses, marketing, manufacturing, and IoT, we may see a lot of data stored in the following formats:
+
+- [Apache Parquet](https://parquet.apache.org/): columnar file format for analytic data.
+- [Apache ORC](https://orc.apache.org/): columnar file format.
+
+and of course CSV, JSON, [images](https://image-net.org/), text files. In [big data for remote sensing](https://www.myecole.it/biblio/wp-content/uploads/2020/11/3DK2DS_Big_Data_Remote_Sensing.pdf), we can see the popularity of [LAS file format](https://www.asprs.org/divisions-committees/lidar-division/laser-las-file-format-exchange-activities) or [SAR image files](https://earth.esa.int/eogateway/instruments/sar-ers). In scientific computing, we may see big data sources in [HDF](https://www.hdfgroup.org/). 
+
+Which ones should we use is also dependent on many factors where big data is applied. Another important aspect is that different big data storage and database systems might support different formats in order to optimize their analytics performance and management for different use cases. Naturally, due to the diversity of file formats and the complexity of data sources and processing frameworks, one may be some techniques to support data. [Apache Arrow](https://arrow.apache.org/) is a framework that support a language-independent format which can be used as an interoperability solution for analytics of data in different file formats.
+
+
+### Column family based Storage in Big Data
+
 In big data, many systems support column family based/wide-column storage. What is it and why?
 
 A common way to organize data in storage and database is to use the table view: we have a row to keep data belong to the same record. And we have multiple rows. It is very good for situations when we need to update data in a record or access a record as a whole, e.g. update the job status of a worker or provide the detail of a worker profile, and every row/record has  the same fields.
@@ -46,12 +61,16 @@ A common way to organize data in storage and database is to use the table view: 
 With big data, in many use cases, we have to scan and aggregate data from millions of rows but with a few columns (and we do not the update of existing data often). In such cases, storing data based on the columns will help to save space as well as to enable big data analytics. For example, if we want to count how many trips the NY Taxi services have conducted, we can scan millions records but a single column.
 
 Furthermore, other aspects of storage in big data are:
+
 * Different rows can have different schemas (the columns are different).
 * A cell stores a value with versioning data, e.g., using timestamp
 * Related columns organized into a family are usually stored and sharded together
 
-Therefore, column family based storage is popular in big data. It is also called [wide-column store](https://en.wikipedia.org/wiki/Wide-column_store). Many big data systems implement the column family data model, such as:
-  * [ Apache HBase](https://www.slideshare.net/larsgeorge/hbase-in-practice)
+Therefore, column family based storage is popular in big data. It is also called [wide-column store](https://en.wikipedia.org/wiki/Wide-column_store). 
+
+
+Many big data systems implement the column family data model, such as:
+  * [Apache HBase](https://www.slideshare.net/larsgeorge/hbase-in-practice)
   * [Apache Accumulo](https://accumulo.apache.org/docs/2.x/getting-started/table_design)
   * [Apache Cassandra](https://cassandra.apache.org/_/index.html)
 
@@ -63,7 +82,7 @@ One specific impact of mahine learning (ML) on databases and data storage in big
 - [LanceDB](https://github.com/lancedb/lancedb)
 - [Cassandra](https://www.datastax.com/blog/introducing-vector-search-empowering-cassandra-astra-db-developers-to-build-generative-ai-applications)
 
-## Metadata
+## Metadata and Data Resources Management
 
 For a big data platform, each tenant will have many databases or datasets. Each database or dataset has different data concerns and other important information characterizing the database/dataset. Therefore, we have to design metadata for databases/datasets.
 
@@ -71,7 +90,7 @@ To give one example, let us assume that a tenant has created a group of datasets
 
 A big data platform would provide features for creating metadata. For example, in [Data Catalog from Google Cloud](https://cloud.google.com/data-catalog), your create template for certain types of metadata. Examples are "Data Governance", "Geo Context" and "Data Quality". Metadata can be associated with the whole dataset or individual data columns. For example, in "Data Governance", you see different information, like "Owner", "Classification", "Personally identifiable information", and "Encrypted" or you see "Geo Context" with "Region" and "Country", and "Data Quality" with  "Completeness".
 
-In general, we should provide various features for the customers to manage metadata about their data in our big data platforms. There are many other systems for metadata, such as [Linkedin DataHub](https://github.com/linkedin/datahub) or [Apache Atlas](https://atlas.apache.org/#/)
+In general, we should provide various features for the customers to manage metadata about their data in our big data platforms. There are many other systems for supporting metadata, such as [Linkedin DataHub](https://github.com/linkedin/datahub), [Apache Atlas](https://atlas.apache.org/#/), and [OpenLineage](https://openlineage.io/).
 
 ## How to choose big databases/storage?
 
