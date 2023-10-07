@@ -14,7 +14,7 @@ Data sources can provide [data at rest](https://en.wikipedia.org/wiki/Data_at_re
 Given the data at rest and data in motion, we will have to use different techniques to analyze them. However, often we would like to use common techniques as much as possible for both types of data. Therefore, you may see that we use tables to capture both data at rest and data in motion. Furthermore, for real-world applications, both types of data are usually handled together. Thus, there are various architectures and frameworks supporting both types of data. 
 
 ## Polyplot big data sources
-When dealing with big data, often we need to deal with different data sources and different types of data. Furthermore, in order to manage a big data platform, we also use different databases. Therefore, [polyplot persistence](https://en.wikipedia.org/wiki/Polyglot_persistence) is what we need to support in big data platforms.
+When dealing with big data, often we need to deal with different data sources and different types of data. Furthermore, in order to manage a big data platform, we also use different databases. Therefore, to support [polyplot persistence](https://en.wikipedia.org/wiki/Polyglot_persistence) is also a requirement in big data platforms.
 
 
 ### For data at rest 
@@ -28,6 +28,7 @@ Examples of databases/storage systems that we will find suitable for big data an
 * [MongoDB](https://www.mongodb.com/)
 
 any many more!
+
 ### For data in motion 
 
 Usually the data is deliverd via messaging systems, such as 
@@ -35,6 +36,7 @@ Usually the data is deliverd via messaging systems, such as
 * NATS: [NATS](https://nats.io/)
 * Systems support AMQP: [RabbitMQ](https://www.rabbitmq.com/) 
 * No protocol standard but widely used systems: [Apache Kafka](https://kafka.apache.org/), [Apache Pulsar](https://pulsar.apache.org/) 
+
 
 ## Column family based Storage in Big Data
 In big data, many systems support column family based/wide-column storage. What is it and why?
@@ -53,6 +55,13 @@ Therefore, column family based storage is popular in big data. It is also called
   * [Apache Accumulo](https://accumulo.apache.org/docs/2.x/getting-started/table_design)
   * [Apache Cassandra](https://cassandra.apache.org/_/index.html)
 
+## Machine Learning and Database/Storage
+One specific impact of mahine learning (ML) on databases and data storage in big data platforms is the need to use [vector databases](https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db) for storing data representing features extracted from ML models, usually as in high dimensional numerical vectors.  Some of vector databases have a complex architecture. Examples of vector databases and solutions are:
+- [Milvus](https://milvus.io/)
+- [Chroma](https://www.trychroma.com/)
+- [pgVector](https://github.com/pgvector/pgvector)
+- [LanceDB](https://github.com/lancedb/lancedb)
+- [Cassandra](https://www.datastax.com/blog/introducing-vector-search-empowering-cassandra-astra-db-developers-to-build-generative-ai-applications)
 
 ## Metadata
 
@@ -68,3 +77,4 @@ In general, we should provide various features for the customers to manage metad
 
 So we say there are many different types of databases and storage for big data and we give some examples above. However, a tricky question is "*how do I select a suitable database/storage for my big data work, say to store my data?*". There is no answer for that question: one has to have a good understanding of existing database/storage technologies and to match these technologies with requirements (type of data, cost, performance, etc.). Some sources may be useful for you to check:
 * [Choosing A Cloud DBMS: Architectures and Tradeoffs](http://vldb.org/pvldb/vol12/p2170-tan.pdf)
+* [Real-Time Databases: Who Is Using Them, and Why?](https://thenewstack.io/real-time-databases-who-is-using-them-and-why/)
