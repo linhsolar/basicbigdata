@@ -81,6 +81,7 @@ One specific impact of mahine learning (ML) on databases and data storage in big
 - [pgVector](https://github.com/pgvector/pgvector)
 - [LanceDB](https://github.com/lancedb/lancedb)
 - [Cassandra](https://www.datastax.com/blog/introducing-vector-search-empowering-cassandra-astra-db-developers-to-build-generative-ai-applications)
+- [Weaviate](https://weaviate.io/)
 
 ## Metadata and Data Resources Management
 
