@@ -60,4 +60,4 @@ e.g., Microsoft, Google, AWS serverless/function-as-a-service
 * [Argo Workflow](https://argoproj.github.io/argo-workflows/): Workflows for managing machine learning pipelines
 
 ## Some samples
-- Simple [BTS Alarms and Camera Upload](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/tree/master/tutorials/airflow)
+- Simple [BTS Alarms and Camera Upload](https://github.com/rdsea/bigdataplatforms/tree/master/tutorials/airflow)

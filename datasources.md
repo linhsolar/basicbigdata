@@ -1,7 +1,7 @@
 # Understanding the source of data
 
 If you look around, you see a lot of open data sources. Many of them are quite big.
->Check [some of the sources we use for study](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/blob/master/data/README.md)
+>Check [some of the sources we use for study](https://github.com/rdsea/bigdataplatforms/data/README.md)
 
 So if you are going to analyze big data, which data sources and data management problems will you have to deal with? Concretely, you might ask which databases and data systems that you will send your analytics requests via your programs or existing tools.
 
