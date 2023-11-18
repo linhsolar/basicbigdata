@@ -32,7 +32,7 @@ One type of activities, we have to master is to carry out pipelines to do data i
 - [The open source ecosystems we pracice](practicebdp.md)
 - [The taste of big data platforms](thetastebdp.md)
 
-### Can Large Language Models (LLMNs) help me to learn?
+### Can Large Language Models (LLMs) help me to learn?
 
 Tools and services atop LLMs are popular for supporting various tasks in big data analytics. Check our basic guide on [using LLMs for the study of big data platforms](https://github.com/rdsea/bigdataplatforms/tree/master/tutorials/llmbdp#readme).
 
