@@ -12,10 +12,10 @@ In the literature, big data is often characterized by:
 * Veracity: indicates the diverse quality (bias, accuracy, etc.)
 * Valence: indicates implicit and explicit relationships among different type of data
 
->You can read further, basic discussions about [big data characteristics](https://www.datasciencecentral.com/profiles/blogs/how-many-v-s-in-big-data-the-characteristics-that-define-big-data) and [what is big data](https://www.oracle.com/big-data/guide/what-is-big-data.html)
+>You can read further, basic discussions about big data characteristics and [what is big data](https://www.oracle.com/big-data/guide/what-is-big-data.html)
 
 In our study, we should not misunderstand that big data means that a *data element* must be *big*. A dataset is constructed from data elements. A data element can be very small, for example a record of environmental sensing, or it can be large, e.g., a video.
->An example of a JSON-based data record for [Base Transceiver Station monitoring](https://version.aalto.fi/gitlab/bigdataplatforms/cs-e4640/-/tree/master/data/bts/README.md) is:
+>An example of a JSON-based data record for [Base Transceiver Station monitoring](https://github.com/rdsea/bigdataplatforms/blob/master/data/bts/README.md) is:
 ```json
 {
   "station_id":"1160629000",
