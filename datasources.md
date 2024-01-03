@@ -13,8 +13,8 @@ Data sources can provide [data at rest](https://en.wikipedia.org/wiki/Data_at_re
 
 Given the data at rest and data in motion, we will have to use different techniques to analyze them. However, often we would like to use common techniques as much as possible for both types of data. Therefore, you may see that we use tables to capture both data at rest and data in motion. Furthermore, for real-world applications, both types of data are usually handled together. Thus, there are various architectures and frameworks supporting both types of data. 
 
-## Polyplot big data sources
-When dealing with big data, often we need to deal with different data sources and different types of data. Furthermore, in order to manage a big data platform, we also use different databases. Therefore, to support [polyplot persistence](https://en.wikipedia.org/wiki/Polyglot_persistence) is also a requirement in big data platforms.
+## Polyglot big data sources
+When dealing with big data, often we need to deal with different data sources and different types of data. Furthermore, in order to manage a big data platform, we also use different databases. Therefore, to support [polyglot persistence](https://en.wikipedia.org/wiki/Polyglot_persistence) is also a requirement in big data platforms.
 
 
 ### For data at rest 
